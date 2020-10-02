@@ -101,9 +101,13 @@ def generate_dungeon(
             #dig out a tunnel between this room  and the previous one
             for x, y in tunnel_between(rooms[-1].center, new_room.center):
                 dungeon.tiles[x, y] = tile_types.floor
-
+            
         #finallt append the new room to the list.
         rooms.append(new_room)
 
     return dungeon
             
+
+max_radius = 10
+
+
